@@ -51,8 +51,7 @@ namespace p128___JoeAndBob {
 
         private void joeGivesToBob_Click(object sender, EventArgs e) {
             if (joe.Cash >= 10) {
-                joe.GiveCash(10);
-                bob.ReceiveCash(10);
+                bob.ReceiveCash(joe.GiveCash(10));
                 UpdateForm();
             }
             else {
@@ -62,8 +61,7 @@ namespace p128___JoeAndBob {
 
         private void bobGivesToJoe_Click(object sender, EventArgs e) {
             if (bob.Cash >= 5) {
-                bob.GiveCash(5);
-                joe.ReceiveCash(5);
+                joe.ReceiveCash(bob.GiveCash(5));
                 UpdateForm();
             }
             else {
