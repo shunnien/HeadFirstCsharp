@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace p128___JoeAndBob {
+    /// <summary>
+    /// 
+    /// </summary>
     class Guy {
         public string Name;
         public int Cash;
 
+        /// <summary>
+        /// Gives the cash.
+        /// </summary>
+        /// <param name="amount">The amount.</param>
+        /// <returns></returns>
         public int GiveCash(int amount) {
             if (amount <= Cash && amount > 0) {
                 Cash -= amount;
@@ -22,6 +30,11 @@ namespace p128___JoeAndBob {
             }
         }
 
+        /// <summary>
+        /// Receives the cash.
+        /// </summary>
+        /// <param name="amount">The amount.</param>
+        /// <returns></returns>
         public int ReceiveCash(int amount) {
             if (amount > 0) {
                 Cash += amount;

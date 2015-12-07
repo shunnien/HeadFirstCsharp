@@ -15,9 +15,10 @@ namespace p128___JoeAndBob {
         int bank = 100;
         public Form1() {
             InitializeComponent();
-            joe = new Guy();
-            joe.Name = "Joe";
-            joe.Cash = 50;
+            joe = new Guy() {
+                Name = "Joe",
+                Cash = 50
+            };
 
             bob = new Guy() {
                 Name = "Bob",
@@ -46,6 +47,28 @@ namespace p128___JoeAndBob {
         private void button2_Click(object sender, EventArgs e) {
             bank += bob.GiveCash(5);
             UpdateForm();
+        }
+
+        private void joeGivesToBob_Click(object sender, EventArgs e) {
+            if (joe.Cash >= 10) {
+                joe.GiveCash(10);
+                bob.ReceiveCash(10);
+                UpdateForm();
+            }
+            else {
+                MessageBox.Show("Joe dosen't have enough money.");
+            }
+        }
+
+        private void bobGivesToJoe_Click(object sender, EventArgs e) {
+            if (bob.Cash >= 5) {
+                bob.GiveCash(5);
+                joe.ReceiveCash(5);
+                UpdateForm();
+            }
+            else {
+                MessageBox.Show("Bob dosen't have enough money.");
+            }
         }
     }
 }
