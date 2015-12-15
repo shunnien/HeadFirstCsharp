@@ -16,7 +16,7 @@ namespace p146___TypeCast {
 
         private void button1_Click(object sender, EventArgs e) {
             decimal myDecimalValue = 10;
-            int myIntValue = myDecimalValue;
+            int myIntValue =(int) myDecimalValue;
 
             MessageBox.Show("The myInterValue is " + myIntValue);
         }
