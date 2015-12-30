@@ -14,12 +14,16 @@ namespace p151___Mileage_Calculator {
         int startingMileage, endingMileage;
         double milesTraveled, reimburseRate = 0.39, amountOwed;
 
+        private void button2_Click(object sender, EventArgs e) {
+            MessageBox.Show(milesTraveled + " miles", "Miles Traveled");
+        }
+
         private void button1_Click(object sender, EventArgs e) {
             startingMileage = (int)numericUpDown1.Value;
             endingMileage = (int)numericUpDown2.Value;
             if (startingMileage < endingMileage) {
                 milesTraveled = endingMileage - startingMileage;
-                amountOwed = milesTraveled *= reimburseRate;
+                amountOwed = milesTraveled * reimburseRate;
                 label4.Text = "$" + amountOwed;
             }
             else {
