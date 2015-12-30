@@ -17,13 +17,14 @@ namespace p151___Mileage_Calculator {
         private void button1_Click(object sender, EventArgs e) {
             startingMileage = (int)numericUpDown1.Value;
             endingMileage = (int)numericUpDown2.Value;
-            if (startingMileage >= endingMileage) {
-                MessageBox.Show("The starting mileage must be less than the ending mileage","Cannot Calculate");
-                return;
+            if (startingMileage < endingMileage) {
+                milesTraveled = endingMileage - startingMileage;
+                amountOwed = milesTraveled *= reimburseRate;
+                label4.Text = "$" + amountOwed;
             }
-            milesTraveled = endingMileage - startingMileage;
-            amountOwed = milesTraveled *= reimburseRate;
-            label4.Text = "$" + amountOwed;
+            else {
+                MessageBox.Show("The starting mileage must be less than the ending mileage", "Cannot Calculate");
+            }
         }
 
         public Form1() {
