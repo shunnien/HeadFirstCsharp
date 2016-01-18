@@ -8,10 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace p168___Sloppy_Joe_s_Menu {
+namespace p168 {
     public partial class Form1 : Form {
         public Form1() {
             InitializeComponent();
+            MenuMaker menu = new MenuMaker() { Randomizer = new Random() };
+            label1.Text = menu.GetMenuItem();
+            label2.Text = menu.GetMenuItem();
+            label3.Text = menu.GetMenuItem();
+            label4.Text = menu.GetMenuItem();
+            label5.Text = menu.GetMenuItem();
+            label6.Text = menu.GetMenuItem();
         }
     }
 }

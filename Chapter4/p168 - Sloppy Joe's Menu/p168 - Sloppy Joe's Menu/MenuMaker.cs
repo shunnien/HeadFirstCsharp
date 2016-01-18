@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace p168___Sloppy_Joe_s_Menu {
+namespace p168 {
     class MenuMaker {
         public Random Randomizer;
 

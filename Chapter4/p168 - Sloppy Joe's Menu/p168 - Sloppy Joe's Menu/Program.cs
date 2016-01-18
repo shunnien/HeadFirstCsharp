@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace p168___Sloppy_Joe_s_Menu {
+namespace p168 {
     static class Program {
         /// <summary>
         /// The main entry point for the application.
