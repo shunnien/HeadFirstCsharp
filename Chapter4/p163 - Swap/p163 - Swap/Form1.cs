@@ -34,6 +34,11 @@ namespace p163___Swap {
             lloyd = tmp;
             MessageBox.Show("Objects swapped");
         }
+
+        private void button4_Click(object sender, EventArgs e) {
+            lloyd.TellMe("Hi", lucinda);
+            lloyd = lucinda;
+        }
     }
 
 
