@@ -17,5 +17,9 @@ namespace p163___Swap {
         public void TellMe(string message, Elephant whoSaidIt) {
             MessageBox.Show(whoSaidIt.Name + " says: " + message);
         }
+
+        public void SpeakTo(Elephant whoTOTalkTo, string message) {
+            whoTOTalkTo.TellMe(message, this);
+        }
     }
 }
